@@ -5,7 +5,7 @@ $config = array('title'=> 'ProjectX',
 		'server' => 'localhost',
 		'username' => 'root',
 		'password'=>'',
-		'name'=>'test_blog'
+		'name'=>'quote'
 
 
 	)
@@ -23,6 +23,3 @@ $config = array('title'=> 'ProjectX',
 
 
 ?>
-
-
-
