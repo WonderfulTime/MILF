@@ -70,6 +70,9 @@
   <p>
     <button type="submit" name="do_signup">Зарегистрироваться</button> <!-- **1  -->
   </p>
+  <p>
+    <button type="button" name="return-to-auth" action="http://http://quote/frontend/index.html">Back to login</button>
+  </p>
 </form>
 
 <!--Валера. добавь кнопку для возврата, путь: http://http://quote/frontend/index.html  -->
