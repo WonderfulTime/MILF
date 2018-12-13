@@ -61,6 +61,7 @@ if (isset($data['do_signup']) ) // **1 проверка нажатия кноп�
     <input id="rgstr-box" class="index-input login-form" type="password" name="password_2" placeholder="Confirm">
     <button id="login-button" class="login-form" name="do_signup">Sign up</button>
     </form>
+    <button id="secondary-button" class="login-form" action="http://http://quote/frontend/index.html">Log In</button>
   </div>
 </body>
 </html>
