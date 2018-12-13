@@ -71,3 +71,5 @@
     <button type="submit" name="do_signup">Зарегистрироваться</button> <!-- **1  -->
   </p>
 </form>
+
+<!--Валера. добавь кнопку для возврата, путь: http://http://quote/frontend/index.html  -->
