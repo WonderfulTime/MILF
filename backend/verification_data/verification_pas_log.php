@@ -61,6 +61,8 @@ $user = R::findOne( 'users', 'login = ? ', array($data['login']) );
           {
             echo '<div style= "color:red;">'.array_shift($errors). //вывод 1-й ошибки из массива
             '</div><hr/>';
+
+              echo "<meta http-equiv='Refresh' content='2; URL=http://Quote/frontend/index.html'>"; // когда найдена ошибка перекидывает пользователя на окно входа
           }
 
 
