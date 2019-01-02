@@ -42,10 +42,9 @@ $user = R::findOne( 'users', 'login = ? ', array($data['login']) );
       /// всё хорошо, пользователь залогинился
       $_SESSION['logged_user'] = $user;
 
-      echo '<div style= "color:green;">'.'Успешная регистрация!'.'Добро пожаловать!'; //вывод 1-й ошибки из массива
-      '</div><hr/>';
 
-      echo "<meta http-equiv='Refresh' content='1; URL=http://Quote/frontend/index.html'>"; //когда доделаем, убрать  на content='0;
+
+      echo "<meta http-equiv='Refresh' content='0; URL=http://Quote/frontend/index.php'>"; //когда доделаем, убрать  на content='0;
 
 
     } else//

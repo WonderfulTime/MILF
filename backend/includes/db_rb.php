@@ -7,5 +7,5 @@ R::setup( 'mysql:host=localhost;dbname=quote',
         'root', '' ); //for both mysql or mariaDB //данные для подключения к базе данных
 
 
-
+session_start();              //метод сессий
 ?>
