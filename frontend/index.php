@@ -1,12 +1,14 @@
 <?php
-?>
-<?php if( isset($_SESSION['logged_user']) ) :     //проверка на наличие пользователя !начало! //если переменная заполнена, то пользователь найден
+ ?>
+ <!-- исправить ! ниже -->
+<?php if(! isset($_SESSION['logged_user']) ) :     //проверка на наличие пользователя !начало! //если переменная заполнена, то пользователь найден
   ?>
-  Добро пожаловать, <?php $_SESSION['logged_user']->login; //логин пользователя из переменной ?>
-  <a href ="http://Quote/backend/verification_data/logout.php"> Разлогин </a>
+  Добро пожаловать, <?php echo $_SESSION['logged_user']->login;?>  !<!-- логин пользователя из переменной --> 
+
+  <br/><a href ="http://Quote/backend/verification_data/logout.php"> Разлогин </a>
 <?php else : //если массив пуст, то вывод на экран авторизации и регистрации
   ?>
-  
+
   <a href = "http://Quote/frontend/login.html" > Авторизоваться </a> <br/>
   <a href = "http://Quote/frontend/registration-page.php" > Зарегистрироваться </a> <br/>
 <?php endif;

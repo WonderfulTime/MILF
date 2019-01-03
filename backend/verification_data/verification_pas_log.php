@@ -32,7 +32,8 @@
 require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php"; //подключение базы данных через библиотеку ReadBeanPHP
 
 $data = $_POST;
-$user = R::findOne( 'users', 'login = ? ', array($data['login']) );
+$errors = array();
+$user = R::findOne( 'users', 'login = ?', array($data['login']) );
   if ($user)
   {
     //логин найден в бд
@@ -63,19 +64,6 @@ $user = R::findOne( 'users', 'login = ? ', array($data['login']) );
 
               echo "<meta http-equiv='Refresh' content='2; URL=http://Quote/frontend/login.html'>"; // когда найдена ошибка перекидывает пользователя на окно входа
           }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ?>
