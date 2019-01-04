@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php"; //подключение базы данных через библиотеку ReadBeanPHP
 // супер-глобальный массив $_GET
 // супер-глобальный массив $_POST
 
@@ -29,7 +30,7 @@
 // //"http://Quote/frontend/main_page.html"
 // }
 
-require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php"; //подключение базы данных через библиотеку ReadBeanPHP
+
 
 $data = $_POST;
 $errors = array();
@@ -42,10 +43,11 @@ $user = R::findOne( 'users', 'login = ?', array($data['login']) );
 
       /// всё хорошо, пользователь залогинился
       $_SESSION['logged_user'] = $user;
+      
 
 
 
-      echo "<meta http-equiv='Refresh' content='0; URL=http://Quote/frontend/index.php'>"; //когда доделаем, убрать  на content='0;
+      echo "<meta http-equiv='Refresh' content='1; URL=http://Quote/frontend/index.php'>"; //когда доделаем, убрать  на content='0;
 
 
     } else//
