@@ -8,6 +8,11 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/libs/rb.php";
   Добро пожаловать, <?php $_SESSION['logged_user']->login; ?>  !<!-- логин пользователя из переменной -->
 
   <br/><a href ="http://Quote/backend/verification_data/logout.php"> Разлогин </a>
+
+
+
+
+
 <?php else : //если массив пуст, то вывод на экран авторизации и регистрации
   ?>
 
