@@ -6,8 +6,10 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/libs/rb.php";
 <?php if(isset($_SESSION['logged_user']) ) :     //проверка на наличие пользователя !начало! //если переменная заполнена, то пользователь найден
   ?>
   Добро пожаловать, <?php $_SESSION['logged_user']->login; ?>  !<!-- логин пользователя из переменной -->
-
+<!-- место для дизигна начало-->
   <br/><a href ="http://Quote/backend/verification_data/logout.php"> Разлогин </a>
+
+<?php echo "<img src='https://sun6-4.userapi.com/c638125/v638125557/5b494/2Xih1o-OXk0.jpg' >"; ?> <!-- Это шутка, удали строку, как увидишь, содержимое -->
 
   <html lang="en">
   <head>
@@ -44,7 +46,7 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/libs/rb.php";
 
 
 
-
+<!-- место для дизигна конец-->
 
 <?php else : //если массив пуст, то вывод на экран авторизации и регистрации
   ?>
