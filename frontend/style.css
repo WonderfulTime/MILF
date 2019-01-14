@@ -153,7 +153,7 @@ body {
   font-size: 20px;
 }
 .logo {
-  float: left;
+  /* float: left; */
   text-align: center;
   width: 24px;
   height: 24px;
@@ -189,11 +189,10 @@ li a {
   background-color: #66C0FF;
   border: none;
   color: white;
-  float:right;
+  margin-left: 50px;
 
 }
 .dropmenu {
-  float: right;
   position: relative;
   display: inline-block;
 }
@@ -206,8 +205,9 @@ li a {
 }
 .dropcontent a {
   color: black;
-  padding 12px 16px;
+  padding: 12px 16px;
   text-decoration: none;
   display:block;
+  font-size: 20px;
 }
-.dropmenu:hover .dropcontent {display: block;}
+.dropmenu:hover .dropcontent {display: block; margin: 0;}
