@@ -62,6 +62,7 @@ if (isset($data['do_signup']) ) // **1 проверка нажатия кноп�
 <html lang="en">
 <head>
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,7 +71,9 @@ if (isset($data['do_signup']) ) // **1 проверка нажатия кноп�
 </head>
 <body>
   <div id="registration-box">
-    <p id="Title">SHIT</p>
+    <p id="Title">QUOTE</p>
+    <div class="form-container">
+
     <form action="http://Quote/frontend/registration-page.php"  method="POST">
     <input id="rgstr-box" class="index-input login-form" type="email" name="email" placeholder="Email" value="<?php echo @$data['email']; ?>">
     <input id="rgstr-box" class="index-input login-form" type="text" name="login" placeholder="Login" value="<?php echo @$data['login']; ?>">
@@ -81,6 +84,8 @@ if (isset($data['do_signup']) ) // **1 проверка нажатия кноп�
     <form action="http://Quote/frontend/login.html">
     <button id="secondary-button" class="login-form">Log In</button>
     </form>
+
+  </div>
   </div>
 </body>
 </html>
