@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,8 @@
 </head>
 <body>
   <div class="login-box">
-    <p id="Title">SHIT</p>
+    <p id="Title">QUOTE</p>
+    <div class="form-container">
     <form id="form-box" method="POST" action="http://Quote\backend\verification_data\verification_pas_log.php" autocomplete="off" >
       <input id="login-place" class="login-form index-input" name="login" type="text" placeholder="Login">
       <input id="password-place" class="login-form index-input" name="password" type="password" placeholder="Password">
@@ -20,6 +22,7 @@
       <form id="register-box" action="http://Quote/frontend/registration-page.php"> <!--Replace URI with URL-->
         <button id="secondary-button" class="btn">Sign Up</button>
       </form>
+    </div>
     </div>
   </div>
   <script language="php">     include('http://Quote/frontend/includes/db_rb.php'); // подключение файла     </script>
