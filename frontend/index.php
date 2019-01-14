@@ -6,9 +6,6 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
  <!-- исправить ! ниже -->
 <?php if(isset($_SESSION['logged_user']) ) :     //проверка на наличие пользователя !начало! //если переменная заполнена, то пользователь найден
   ?>
-  Добро пожаловать <?php echo  $_SESSION['logged_user']-> login ; ?>  !<!-- логин пользователя из переменной -->
-<!-- место для дизигна начало-->
-  <br/><a href ="http://Quote/backend/verification_data/logout.php"> Разлогин </a>
 
 
 
@@ -17,7 +14,7 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,8 +29,14 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
           <i class="material-icons"> accessibility </i>
         </div>
         <div class="nav-bar">
-          <div class="settings-button">
+          <div class="dropmenu">
+          <button class="settings-button">
             <i class="material-icons">settings</i>
+          </button>
+          <div class="dropcontent">
+            <a href="#">settings</a>
+            <a href="http://Quote/backend/verification_data/logout.php">logout</a>
+          </div>
           </div>
         </div>
       </div>
