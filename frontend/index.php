@@ -67,15 +67,21 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
              ?>
           </div>
           <div class="post">
-            <?php echo $quote->text; // работаем с данными, как с объектом
+            <?php $quote_id = $quote->id-1;
+            $quote = R::load('quotes', $quote_id);
+             echo $quote->text; // работаем с данными, как с объектом
              ?>
           </div>
           <div class="post">
-            <?php echo $quote->text; // работаем с данными, как с объектом
+            <?php $quote_id = $quote->id-2;
+            $quote = R::load('quotes', $quote_id);
+            echo $quote->text; // работаем с данными, как с объектом
              ?>
           </div>
           <div class="post">
-            <?php echo $quote->text; // работаем с данными, как с объектом
+            <?php $quote_id = $quote->id-3;
+            $quote = R::load('quotes', $quote_id);
+            echo $quote->text; // работаем с данными, как с объектом
              ?>
           </div>
 
