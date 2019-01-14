@@ -76,6 +76,9 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
 
 
 
+  <?php $_SESSION['data_getter'] = $quote; ?>   <!--DELETE  -->
+
+
 
 
 
