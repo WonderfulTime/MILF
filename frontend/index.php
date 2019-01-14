@@ -14,7 +14,9 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/libs/rb.php";
   <html lang="en">
   <head>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,15 +27,39 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/libs/rb.php";
     <!-- <script src="addElement.js" async></script> -->
     <div class="page-content">
       <div class="header">
-        Quote
+        <!-- <div class="logo" href="/index.php" aria-label="Home" accesskey="1">
+          <i class="material-icons"> accessibility </i>
+        </div> -->
+        <div class="nav-bar">
+          <ul>
+            <li>
+              <a href="/index.php"><i class="material-icons"> accessibility </i></a>
+            </li>
+            <li>
+              <a href="something">some1</a>
+            </li>
+            <li>
+              <a href="something1">some2</a>
+            </li>
+            <li>
+              <a href="something2">some3</a>
+            </li>
+            <li>
+              <a href="something3">some4</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="content-body">
         <div class="post-container">
           <div class="post">
-            some text about that one thing that happened last day aadsfjsdfjnsdsdffffffff
+            some text about that one thing that happened last daaasy some text about that one thing that happened last daaasy some text about that one thing that happened last daaasy one thing that happened last daaasy one thing that happened last daaasy one thing that happened last daaasy one thing that happened last daaasy one thing that happened last daaasy one thing that happened last daaasy
           </div>
           <div class="post">
             some text
+          </div>
+          <div class="post">
+            some text ая и на рускам магу hurr durr
           </div>
         </div>
       </div>
