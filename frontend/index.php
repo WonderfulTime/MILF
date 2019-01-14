@@ -28,31 +28,24 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
     <!-- <script src="addElement.js" async></script> -->
     <div class="page-content">
       <div class="header">
-        <!-- <div class="logo" href="/index.php" aria-label="Home" accesskey="1">
+        <div class="logo" href="/index.php" aria-label="Home" accesskey="1">
           <i class="material-icons"> accessibility </i>
-        </div> -->
+        </div>
         <div class="nav-bar">
-          <ul>
-            <li>
-              <a href="/index.php"><i class="material-icons"> accessibility </i></a> <!-- СДЕЛАЙ НОРМАЛЬНЫЙ ПУТЬ!!!!  -->
-            </li>
-            <li>
-              <a href="something">some1</a>
-            </li>
-            <li>
-              <a href="something1">some2</a>
-            </li>
-            <li>
-              <a href="something2">some3</a>
-            </li>
-            <li>
-              <a href="something3">some4</a>
-            </li>
-          </ul>
+          <div class="settings-button">
+            <i class="material-icons">settings</i>
+          </div>
         </div>
       </div>
       <div class="content-body">
         <div class="post-container">
+          <div class="post">  <!-- форма для отправки цитат на сервер -->
+            <form id="form-box" method="GET" action="http://Quote/frontend/index.php" autocomplete="off" >
+              <textarea id="quote-input" class="input-form" name="text" type="text" placeholder="some quote"></textarea> <!-- проставь сдесь соответствующие имена id и классов -->
+
+              <button id="index-button" class="login-form btn" name = "Done_quote">Done</button>
+            </form>
+          </div>
 
           <?php
               $data = $_GET;
@@ -73,6 +66,18 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
             <?php echo $quote->text; // работаем с данными, как с объектом
              ?>
           </div>
+          <div class="post">
+            <?php echo $quote->text; // работаем с данными, как с объектом
+             ?>
+          </div>
+          <div class="post">
+            <?php echo $quote->text; // работаем с данными, как с объектом
+             ?>
+          </div>
+          <div class="post">
+            <?php echo $quote->text; // работаем с данными, как с объектом
+             ?>
+          </div>
 
 
 
@@ -85,13 +90,7 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
 
 
 
-          <div class="post">  <!-- форма для отправки цитат на сервер -->
-            <form id="form-box" method="GET" action="http://Quote/frontend/index.php" autocomplete="off" >
-              <input id="login-place" class="login-form index-input" name="text" type="text" placeholder="some quote"> <!-- проставь сдесь соответствующие имена id и классов -->
 
-              <button id="index-button" class="login-form btn" name = "Done_quote" >Done</button>
-            </form>
-          </div>
         </div>
       </div>
     </div>
