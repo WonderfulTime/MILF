@@ -1,11 +1,12 @@
 <?php
 session_start();
-require $_SERVER['DOCUMENT_ROOT']."\backend/libs/rb.php";
+require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
+
  ?>
  <!-- исправить ! ниже -->
 <?php if(isset($_SESSION['logged_user']) ) :     //проверка на наличие пользователя !начало! //если переменная заполнена, то пользователь найден
   ?>
-  Добро пожаловать, <?php echo  $_SESSION['logged_user']->login ; ?>  !<!-- логин пользователя из переменной -->
+  Добро пожаловать <?php echo  $_SESSION['logged_user']-> login ; ?>  !<!-- логин пользователя из переменной -->
 <!-- место для дизигна начало-->
   <br/><a href ="http://Quote/backend/verification_data/logout.php"> Разлогин </a>
 
@@ -33,7 +34,7 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/libs/rb.php";
         <div class="nav-bar">
           <ul>
             <li>
-              <a href="/index.php"><i class="material-icons"> accessibility </i></a>
+              <a href="/index.php"><i class="material-icons"> accessibility </i></a> <!-- СДЕЛАЙ НОРМАЛЬНЫЙ ПУТЬ!!!!  -->
             </li>
             <li>
               <a href="something">some1</a>
@@ -52,14 +53,41 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/libs/rb.php";
       </div>
       <div class="content-body">
         <div class="post-container">
+
+          <?php
+              $data = $_GET;
+              if (isset($data['Done_quote']) )
+                {
+                  $quote = R::dispense('quotes'); // создание таблицы цитат в бд
+                  $quote-> text = $data['text'];
+                  R::store($quote);
+                }
+
+
+          ?>
+<?php
+          $quote_id = $quote->id;
+          $quote = R::load('quotes', $quote_id);
+          ?>
           <div class="post">
-            some text about that one thing that happened last daaasy some text about that one thing that happened last daaasy some text about that one thing that happened last daaasy one thing that happened last daaasy one thing that happened last daaasy one thing that happened last daaasy one thing that happened last daaasy one thing that happened last daaasy one thing that happened last daaasy
+            <?php echo $quote->text; // работаем с данными, как с объектом
+             ?>
           </div>
-          <div class="post">
-            some text
-          </div>
-          <div class="post">
-            some text ая и на рускам магу hurr durr
+
+
+
+
+
+
+
+
+
+          <div class="post">  <!-- форма для отправки цитат на сервер -->
+            <form id="form-box" method="GET" action="http://Quote/frontend/index.php" autocomplete="off" >
+              <input id="login-place" class="login-form index-input" name="text" type="text" placeholder="some quote"> <!-- проставь сдесь соответствующие имена id и классов -->
+
+              <button id="index-button" class="login-form btn" name = "Done_quote" >Done</button>
+            </form>
           </div>
         </div>
       </div>
