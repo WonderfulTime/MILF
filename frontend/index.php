@@ -26,7 +26,7 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
     <div class="page-content">
       <div class="header">
         <div class="logo" href="/index.php" aria-label="Home" accesskey="1">
-          <img src="https://www.clipartmax.com/png/middle/142-1429905_happy-filly-applejack-by-coldbolognamy-little-pony-princess-candies-my-little-pony.png" width="50" height="50" alt="home">
+          <img src="https://cs11.pikabu.ru/post_img/big/2018/10/04/10/15386746561455930.png" width="50" height="50" alt="home">
         </div>
         <div class="nav-bar">
           <div class="dropmenu">
