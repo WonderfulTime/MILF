@@ -54,6 +54,8 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
               $data = $_GET;
               if (isset($data['Done_quote']) )
                 {
+                  $filter = array("<", ">");
+                  $_GET['q']=str_replace ($filter, "|", $_GET['q']);
                   $quote = R::dispense('quotes'); // создание таблицы цитат в бд
                   $quote-> text = $data['text'];
                   R::store($quote);
