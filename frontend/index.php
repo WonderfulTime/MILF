@@ -46,7 +46,7 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
             <form id="form-box" method="GET" action="http://Quote/frontend/index.php" autocomplete="off" >
               <textarea id="quote-input" class="input-form" name="text" type="text" placeholder="some quote"></textarea> <!-- проставь сдесь соответствующие имена id и классов -->
 
-              <button id="index-button" class="login-form btn" name = "Done_quote">Done</button>
+              <button id="index-button" class="login-form btn" name = "Done_quote" >Done</button>
             </form>
           </div>
 
@@ -54,9 +54,9 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
               $data = $_GET;
               if (isset($data['Done_quote']) )
                 {
-                  $filter = array("<", ">");
-                  $_GET['q']=str_replace ($filter, "|", $_GET['q']);
                   $quote = R::dispense('quotes'); // создание таблицы цитат в бд
+                  $filter = array("<", ">");
+                  $_GET['text']=str_replace ($filter, "loli", $_GET['text']);
                   $quote-> text = $data['text'];
                   R::store($quote);
                 }
