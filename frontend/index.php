@@ -74,19 +74,19 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
           <div class="post">
             <?php $quote_id = $quote->id-1;
             $quote = R::load('quotes', $quote_id);
-             echo echo htmlspecialchars($quote->text); // работаем с данными, как с объектом
+             echo htmlspecialchars($quote->text); // работаем с данными, как с объектом
              ?>
           </div>
           <div class="post">
             <?php $quote_id = $quote->id-2;
             $quote = R::load('quotes', $quote_id);
-            echo echo htmlspecialchars($quote->text); // работаем с данными, как с объектом
+            echo htmlspecialchars($quote->text); // работаем с данными, как с объектом
              ?>
           </div>
           <div class="post">
             <?php $quote_id = $quote->id-3;
             $quote = R::load('quotes', $quote_id);
-            echo echo htmlspecialchars($quote->text); // работаем с данными, как с объектом
+            echo htmlspecialchars($quote->text); // работаем с данными, как с объектом
              ?>
           </div>
 
