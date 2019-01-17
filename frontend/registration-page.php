@@ -70,22 +70,24 @@ if (isset($data['do_signup']) ) // **1 проверка нажатия кноп�
   <title>Quote | Register</title>
 </head>
 <body>
-  <div id="registration-box">
-    <p id="Title">QUOTE</p>
-    <div class="form-container">
-
-    <form action="http://Quote/frontend/registration-page.php"  method="POST">
-    <input id="rgstr-box" class="index-input login-form" type="email" name="email" placeholder="Email" value="<?php echo @$data['email']; ?>">
-    <input id="rgstr-box" class="index-input login-form" type="text" name="login" placeholder="Login" value="<?php echo @$data['login']; ?>">
-    <input id="rgstr-box" class="index-input login-form" type="password" name="password" placeholder="Password">
-    <input id="rgstr-box" class="index-input login-form" type="password" name="password_2" placeholder="Confirm">
-    <button id="index-button" class="login-form" name="do_signup">Sign up</button>
-    </form>
-    <form action="http://Quote/frontend/login.html">
-    <button id="secondary-button" class="login-form">Log In</button>
-    </form>
-
-  </div>
+  <div class="outer-box">
+    <div class="middle">
+      <div id="registration-box">
+        <p id="Title">QUOTE</p>
+        <div class="form-container">
+          <form action="http://Quote/frontend/registration-page.php"  method="POST">
+            <input id="rgstr-box" class="index-input login-form" type="email" name="email" placeholder="Email" value="<?php echo @$data['email']; ?>">
+            <input id="rgstr-box" class="index-input login-form" type="text" name="login" placeholder="Login" value="<?php echo @$data['login']; ?>">
+            <input id="rgstr-box" class="index-input login-form" type="password" name="password" placeholder="Password">
+            <input id="rgstr-box" class="index-input login-form" type="password" name="password_2" placeholder="Confirm">
+            <button id="index-button" class="login-form" name="do_signup">Sign up</button>
+          </form>
+          <form action="http://Quote/frontend/login.html">
+            <button id="secondary-button" class="login-form">Log In</button>
+          </form>
+        </div>
+      </div>
+      </div>
   </div>
 </body>
 </html>

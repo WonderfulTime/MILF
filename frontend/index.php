@@ -26,7 +26,8 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
     <div class="page-content">
       <div class="header">
         <div class="logo" href="/index.php" aria-label="Home" accesskey="1">
-          <img src="https://cs11.pikabu.ru/post_img/big/2018/10/04/10/15386746561455930.png" width="50" height="50" alt="home">
+          <!-- <img src="https://cs11.pikabu.ru/post_img/big/2018/10/04/10/15386746561455930.png" width="50" height="50" alt="home"> -->
+          <span class="MainTitle">Quote</span>
         </div>
         <div class="nav-bar">
           <div class="dropmenu">
@@ -34,8 +35,8 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
             <i class="material-icons">settings</i>
           </button>
           <div class="dropcontent">
-            <a href="#">settings</a>
-            <a href="http://Quote/backend/verification_data/logout.php">logout</a>
+            <!-- <a href="#">settings</a> -->
+            <a href="http://Quote/backend/verification_data/logout.php">Logout</a>                 
           </div>
           </div>
         </div>
@@ -44,7 +45,7 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
         <div class="post-container">
           <div class="post">  <!-- форма для отправки цитат на сервер -->
             <form id="form-box" method="GET" action="http://Quote/frontend/index.php" autocomplete="off" >
-              <textarea id="quote-input" class="input-form" name="text" type="text" placeholder="some quote"></textarea> <!-- проставь сдесь соответствующие имена id и классов -->
+              <textarea id="quote-input" class="input-form" name="text" type="text" placeholder="Write a quote..."></textarea> <!-- проставь сдесь соответствующие имена id и классов -->
 
               <button id="index-button" class="login-form btn" name = "Done_quote" >Done</button>
             </form>
@@ -74,19 +75,19 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
           <div class="post">
             <?php $quote_id = $quote->id-1;
             $quote = R::load('quotes', $quote_id);
-             echo htmlspecialchars($quote->text); // работаем с данными, как с объектом
+             echo echo htmlspecialchars($quote->text); // работаем с данными, как с объектом
              ?>
           </div>
           <div class="post">
             <?php $quote_id = $quote->id-2;
             $quote = R::load('quotes', $quote_id);
-            echo htmlspecialchars($quote->text); // работаем с данными, как с объектом
+            echo echo htmlspecialchars($quote->text); // работаем с данными, как с объектом
              ?>
           </div>
           <div class="post">
             <?php $quote_id = $quote->id-3;
             $quote = R::load('quotes', $quote_id);
-            echo htmlspecialchars($quote->text); // работаем с данными, как с объектом
+            echo echo htmlspecialchars($quote->text); // работаем с данными, как с объектом
              ?>
           </div>
 
@@ -116,10 +117,11 @@ require $_SERVER['DOCUMENT_ROOT']."\backend/includes/db_rb.php";
 <!-- место для дизигна конец-->
 
 <?php else : //если массив пуст, то вывод на экран авторизации и регистрации
-  ?>
-Вы не авторизованы, пройдите по нужной ссылке ниже! </br>
+  ?> <div class="login-box reauth-box">
+    Вы не авторизованы, пройдите по нужной ссылке ниже! </br>
   <a href = "http://Quote/frontend/login.html" > Авторизоваться </a> <br/>
   <a href = "http://Quote/frontend/registration-page.php" > Зарегистрироваться </a> <br/>
+  </div>
 <?php endif;
                                                 //проверка на наличие пользователя !конец!
 ?>
